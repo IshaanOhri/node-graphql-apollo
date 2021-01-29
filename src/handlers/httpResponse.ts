@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2020-12-09 14:25:19
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2020-12-09 14:28:09
+ * @Last Modified time: 2021-01-30 01:11:20
  * @Description: Contains the HTTP Response Template and HTTP Response Handler
  */
 import moment from 'moment';
@@ -18,11 +18,12 @@ class HttpResponse {
 
 	metadata: Metadata;
 
-	constructor(status: number, data: any) {
+	constructor(status: number, data: any, message: string = '') {
 		this.data = data;
 		this.metadata = {
 			success: true,
 			status,
+			message,
 			timestamp: moment().format(),
 		};
 	}
@@ -34,11 +35,8 @@ class HttpResponse {
 
 const HttpResponseHandler = (httpResponse: HttpResponse, res: Response) => {
 	const { data, metadata } = httpResponse;
-	if (data == null) {
-		res.status(metadata.status).send({ metadata });
-	} else {
-		res.status(metadata.status).send({ data, metadata });
-	}
+
+	res.status(metadata.status).send({ data, metadata });
 };
 
 export { HttpResponse, HttpResponseHandler };

@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 00:51:19
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 00:51:47
+ * @Last Modified time: 2021-01-30 01:14:01
  * @Description: Contains all handlers like try/catch, not found and all response handlers
  */
 
@@ -20,7 +20,7 @@ const catchAsync = (fn: any) => {
 
 // No route found
 const notFound = (req: Request, res: Response, next: NextFunction) => {
-	next(new HttpError(status.notFound, message.notFound));
+	next(new HttpError(status.notFound, null, message.notFound));
 };
 
 // All response handlers
@@ -33,7 +33,7 @@ const responseHandler = (response: HttpError | HttpResponse, req: Request, res: 
 	if (!(response instanceof HttpError)) {
 		logger.error(response);
 		// eslint-disable-next-line no-param-reassign
-		response = new HttpError(status.serverError, message.serverError);
+		response = new HttpError(status.serverError, null, message.serverError);
 	}
 	HttpErrorHandler(response, res);
 };
