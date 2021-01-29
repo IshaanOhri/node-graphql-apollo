@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-29 23:22:48
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 01:13:49
+ * @Last Modified time: 2021-01-30 02:30:54
  * @Description: Main driver file for the server
  */
 
@@ -16,6 +16,9 @@ import { notFound, responseHandler } from './middleware';
 
 // Initializing Express App
 const app: Application = express();
+
+// Connect to Database
+require('./database/database');
 
 // Initializing Apollo Server
 const server = new ApolloServer({
