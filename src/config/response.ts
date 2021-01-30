@@ -22,6 +22,8 @@ const message = {
 	notFound: 'The requested route does not exist.',
 	serverError: 'An internal server error occurred. Please try again.',
 	emailExists: 'The entered email id already exists.',
+	emailNotExist: 'The entered email id does not exists.',
+	incorrectPassword: 'The entered password is incorrect.',
 };
 
 export { status, message };

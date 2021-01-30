@@ -9,13 +9,15 @@
 import { Document, Model } from 'mongoose';
 
 interface IUser extends Document {
+	_doc: any;
 	name: string;
 	email: string;
 	password: string;
 }
 
 interface IUserModel extends Model<IUser> {
-	checkEmailExists(email: string): Promise<void>;
+	checkEmailExists(email: string): Promise<boolean>;
+	findUserByEmail(email: string): Promise<IUser | null>;
 }
 
 export { IUser, IUserModel };
