@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 02:42:14
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 14:34:01
+ * @Last Modified time: 2021-01-30 17:30:33
  * @Description: Definition of User for graphql schema
  */
 

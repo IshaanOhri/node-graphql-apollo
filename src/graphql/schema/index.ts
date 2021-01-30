@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 01:15:59
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 02:39:29
+ * @Last Modified time: 2021-01-30 20:01:34
  * @Description: Indexing file for graphql schema
  */
 
