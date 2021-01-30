@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 12:53:34
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 15:32:09
+ * @Last Modified time: 2021-01-30 16:21:50
  * @Description: Definition of the MongoDB User Model
  */
 
@@ -46,6 +46,12 @@ userSchema.statics.checkEmailExists = async (email: string): Promise<boolean> =>
 
 userSchema.statics.findUserByEmail = async (email: string): Promise<IUser | null> => {
 	const user: IUser | null = await User.findOne({ email });
+
+	return user;
+};
+
+userSchema.statics.findAllUsers = async (): Promise<IUser[]> => {
+	const user: IUser[] = await User.find();
 
 	return user;
 };

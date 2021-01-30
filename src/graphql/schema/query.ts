@@ -10,8 +10,7 @@ import { gql } from 'apollo-server';
 
 const querySchema = gql`
 	type Query {
-		# Enter query here
-		user: [User!]!
+		users: [User!]!
 	}
 `;
 

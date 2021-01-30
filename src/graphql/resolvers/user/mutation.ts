@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 12:26:40
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 15:34:01
+ * @Last Modified time: 2021-01-30 16:16:38
  * @Description: Mutation resolvers for all User related operations
  */
 
