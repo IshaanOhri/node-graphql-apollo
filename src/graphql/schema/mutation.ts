@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 02:41:30
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 20:01:52
+ * @Last Modified time: 2021-01-30 22:38:37
  * @Description: All mutations for graphql schema
  */
 

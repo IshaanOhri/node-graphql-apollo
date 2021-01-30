@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 12:53:34
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 20:58:25
+ * @Last Modified time: 2021-01-30 22:06:08
  * @Description: Definition of the MongoDB User Model
  */
 

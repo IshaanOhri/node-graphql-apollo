@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-29 23:21:26
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 14:04:00
+ * @Last Modified time: 2021-01-30 22:36:44
  * @Description: Exports all response codes and response messages
  */
 
@@ -21,9 +21,10 @@ const message = {
 	healthRoute: 'Node.js backend running successfully!',
 	notFound: 'The requested route does not exist.',
 	serverError: 'An internal server error occurred. Please try again.',
-	emailExists: 'The entered email id already exists.',
-	emailNotExist: 'The entered email id does not exists.',
+	emailExists: 'The entered Email ID already exists.',
+	emailNotExist: 'The entered Email ID does not exists.',
 	incorrectPassword: 'The entered password is incorrect.',
+	unauthorized: 'Unauthorized request. Please login again',
 };
 
 export { status, message };
