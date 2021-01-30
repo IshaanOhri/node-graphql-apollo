@@ -2,13 +2,14 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-29 23:22:48
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 02:30:54
+ * @Last Modified time: 2021-01-30 12:30:06
  * @Description: Main driver file for the server
  */
 
 import express, { Application } from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { typeDefs } from './graphql/schema/index';
+import { resolvers } from './graphql/resolvers/index';
 import logger from './log/config';
 import { HOST, PORT } from './config';
 import { router } from './api/routes';
@@ -23,6 +24,7 @@ require('./database/database');
 // Initializing Apollo Server
 const server = new ApolloServer({
 	typeDefs,
+	resolvers,
 });
 
 // Apple Express App as middleware to Apollo Server
