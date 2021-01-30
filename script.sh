@@ -8,5 +8,5 @@ git add .
 echo "Enter commit message"
 read commit
 git commit -m "$commit"
-git checkout -b 1-SignUp
-git push origin 1-SignUp
+git checkout -b 2-Login
+git push origin 2-Login
