@@ -7,8 +7,9 @@
  */
 
 import { gql } from 'apollo-server';
+import { DocumentNode } from 'graphql';
 
-const mutationSchema = gql`
+const mutationSchema: DocumentNode = gql`
 	type Mutation {
 		# User Mutations
 		signUp(signUpInput: SignUpInput!): User!

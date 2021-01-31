@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-29 23:22:48
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 22:40:53
+ * @Last Modified time: 2021-01-31 23:22:42
  * @Description: Main driver file for the server
  */
 
@@ -22,7 +22,7 @@ const app: Application = express();
 require('./database/database');
 
 // Initializing Apollo Server
-const server = new ApolloServer({
+const server: ApolloServer = new ApolloServer({
 	typeDefs,
 	resolvers,
 	context,

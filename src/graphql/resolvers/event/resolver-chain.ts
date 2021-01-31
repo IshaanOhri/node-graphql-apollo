@@ -7,10 +7,11 @@
  */
 
 // Provide information related to creator of an event
+import { IResolvers } from 'apollo-server';
 import { IEvent, IUser } from '../../../interfaces';
 import { User } from '../../../models';
 
-const eventResolverChain = {
+const eventResolverChain: IResolvers = {
 	Event: {
 		creator: async (parent: IEvent) => {
 			const user: IUser | null = await User.findById(parent.creator);

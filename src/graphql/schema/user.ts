@@ -7,8 +7,9 @@
  */
 
 import { gql } from 'apollo-server';
+import { DocumentNode } from 'graphql';
 
-const userSchema = gql`
+const userSchema: DocumentNode = gql`
 	type User {
 		_id: ID!
 		name: String!

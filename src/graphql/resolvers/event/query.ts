@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-31 19:56:53
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-31 20:40:04
+ * @Last Modified time: 2021-01-31 23:21:41
  * @Description: Query resolvers for all Event related operations
  */
 

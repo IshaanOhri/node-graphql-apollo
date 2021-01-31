@@ -7,8 +7,9 @@
  */
 
 import { gql } from 'apollo-server';
+import { DocumentNode } from 'graphql';
 
-const eventSchema = gql`
+const eventSchema: DocumentNode = gql`
 	type Event {
 		_id: ID!
 		title: String!
