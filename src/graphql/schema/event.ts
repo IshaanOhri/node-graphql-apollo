@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 02:42:56
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 20:02:19
+ * @Last Modified time: 2021-01-31 01:39:47
  * @Description: Definition of Event for graphql schema
  */
 
@@ -15,6 +15,7 @@ const eventSchema = gql`
 		description: String!
 		price: Float!
 		date: String!
+		creator: User!
 	}
 
 	input EventInput {

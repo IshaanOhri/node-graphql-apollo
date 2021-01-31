@@ -2,16 +2,14 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 12:26:40
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 22:06:08
+ * @Last Modified time: 2021-01-30 22:49:09
  * @Description: Mutation resolvers for all User related operations
  */
 
 import bcrypt from 'bcrypt';
 import * as jwt from 'jsonwebtoken';
 import { IUser } from '../../../interfaces';
-import logger from '../../../log/config';
 import { User } from '../../../models';
-import { catchAsync } from '../../../middleware';
 import { HttpError } from '../../../handlers';
 import { JWT_SECRET, message, status } from '../../../config';
 

@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 20:58:22
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 21:03:34
+ * @Last Modified time: 2021-01-31 02:06:06
  * @Description: Definition of the MongoDB Event Model
  */
 
@@ -29,6 +29,11 @@ const eventSchema: Schema<IEvent, IEventModel> = new Schema(
 			type: String,
 			required: true,
 			trim: true,
+		},
+		creator: {
+			type: Schema.Types.ObjectId,
+			required: true,
+			ref: 'User',
 		},
 	},
 	{

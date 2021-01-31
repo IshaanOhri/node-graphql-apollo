@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 16:16:01
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 22:41:31
+ * @Last Modified time: 2021-01-31 16:02:39
  * @Description: Query resolvers for all User related operations
  */
 
@@ -18,6 +18,16 @@ const userQuery = {
 		}
 
 		const user: IUser[] = await User.findAllUsers();
+
+		// await Promise.all(
+		// 	user.map(async (single) => {
+		// 		await single
+		// 			.populate({
+		// 				path: 'events',
+		// 			})
+		// 			.execPopulate();
+		// 	})
+		// );
 
 		return user;
 	},

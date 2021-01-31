@@ -8,5 +8,5 @@ git add .
 echo "Enter commit message"
 read commit
 git commit -m "$commit"
-git checkout -b 4-Events
-git push origin 4-Events
+git checkout -b 6-Event_and_User_Resolver_Chain
+git push origin 6-Event_and_User_Resolver_Chain
