@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-29 23:21:26
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 22:36:44
+ * @Last Modified time: 2021-01-31 20:34:50
  * @Description: Exports all response codes and response messages
  */
 
@@ -25,6 +25,7 @@ const message = {
 	emailNotExist: 'The entered Email ID does not exists.',
 	incorrectPassword: 'The entered password is incorrect.',
 	unauthorized: 'Unauthorized request. Please login again',
+	noEvent: 'Event not found.',
 };
 
 export { status, message };

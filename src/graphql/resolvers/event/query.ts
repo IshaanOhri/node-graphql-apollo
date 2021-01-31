@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-31 19:56:53
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-31 20:28:51
+ * @Last Modified time: 2021-01-31 20:40:04
  * @Description: Query resolvers for all Event related operations
  */
 
@@ -35,6 +35,19 @@ const eventQuery = {
 		const events: IEvent[] = await Event.find();
 
 		return events;
+	},
+	event: async (parent: any, { eventId }: any, context: any, info: any) => {
+		if (!context.loggedIn) {
+			throw new HttpError(status.unauthorized, null, message.unauthorized);
+		}
+
+		const event: IEvent | null = await Event.findById(eventId);
+
+		if (!event) {
+			throw new HttpError(status.badRequest, null, message.noEvent);
+		}
+
+		return event;
 	},
 };
 
