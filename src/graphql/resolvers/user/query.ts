@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 16:16:01
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-31 16:02:39
+ * @Last Modified time: 2021-01-31 20:28:04
  * @Description: Query resolvers for all User related operations
  */
 
@@ -17,7 +17,7 @@ const userQuery = {
 			throw new HttpError(status.unauthorized, null, message.unauthorized);
 		}
 
-		const user: IUser[] = await User.findAllUsers();
+		const user: IUser[] = await User.find();
 
 		// await Promise.all(
 		// 	user.map(async (single) => {

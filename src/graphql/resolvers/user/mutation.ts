@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 12:26:40
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-30 22:49:09
+ * @Last Modified time: 2021-01-31 20:27:51
  * @Description: Mutation resolvers for all User related operations
  */
 
@@ -34,7 +34,7 @@ const userMutation = {
 		return user;
 	},
 	login: async (parent: any, { loginInput: { email, password } }: any, context: any, info: any) => {
-		const user: IUser | null = await User.findUserByEmail(email);
+		const user: IUser | null = await User.findOne({ email });
 
 		if (!user) {
 			throw new HttpError(status.badRequest, null, message.emailNotExist);
