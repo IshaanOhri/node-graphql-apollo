@@ -36,7 +36,7 @@ const eventQuery = {
 
 		return events;
 	},
-	event: async (parent: any, { eventId }: any, context: any, info: any): Promise<IEvent> => {
+	event: async (parent: any, { eventId }: { eventId: string }, context: any, info: any): Promise<IEvent> => {
 		if (!context.loggedIn) {
 			throw new HttpError(status.unauthorized, null, message.unauthorized);
 		}

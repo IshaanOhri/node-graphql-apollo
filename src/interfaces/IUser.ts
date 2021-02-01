@@ -20,8 +20,6 @@ interface IUser extends Document {
 
 interface IUserModel extends Model<IUser> {
 	checkEmailExists(email: string): Promise<boolean>;
-	findUserByEmail(email: string): Promise<IUser | null>;
-	findAllUsers(): Promise<IUser[]>;
 }
 
 export { IUser, IUserModel };

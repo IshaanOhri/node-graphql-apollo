@@ -14,7 +14,9 @@ import { Event } from '../../../models/Event';
 const eventMutation = {
 	createEvent: async (
 		parent: any,
-		{ eventInput: { title, description, price, date } }: any,
+		{
+			eventInput: { title, description, price, date },
+		}: { eventInput: { title: string; description: string; price: number; date: string } },
 		context: any,
 		info: any
 	): Promise<IEvent> => {

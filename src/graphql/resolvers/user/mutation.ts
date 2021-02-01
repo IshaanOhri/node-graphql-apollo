@@ -16,7 +16,7 @@ import { JWT_SECRET, message, status } from '../../../config';
 const userMutation = {
 	signUp: async (
 		parent: any,
-		{ signUpInput: { name, email, password } }: any,
+		{ signUpInput: { name, email, password } }: { signUpInput: { name: string; email: string; password: string } },
 		context: any,
 		info: any
 	): Promise<IUser> => {
@@ -38,7 +38,12 @@ const userMutation = {
 
 		return user;
 	},
-	login: async (parent: any, { loginInput: { email, password } }: any, context: any, info: any): Promise<IUser> => {
+	login: async (
+		parent: any,
+		{ loginInput: { email, password } }: { loginInput: { email: string; password: string } },
+		context: any,
+		info: any
+	): Promise<IUser> => {
 		const user: IUser | null = await User.findOne({ email });
 
 		if (!user) {
