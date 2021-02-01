@@ -10,7 +10,7 @@ import mongoose from 'mongoose';
 import { MONGO_DB_URL } from '../config';
 import logger from '../log/config';
 
-(async () => {
+(async (): Promise<void> => {
 	try {
 		await mongoose.connect(MONGO_DB_URL, {
 			useNewUrlParser: true,

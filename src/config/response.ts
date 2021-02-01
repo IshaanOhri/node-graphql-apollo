@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-29 23:21:26
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-31 20:34:50
+ * @Last Modified time: 2021-02-01 23:34:19
  * @Description: Exports all response codes and response messages
  */
 
@@ -26,6 +26,8 @@ const message = {
 	incorrectPassword: 'The entered password is incorrect.',
 	unauthorized: 'Unauthorized request. Please login again',
 	noEvent: 'Event not found.',
+	ownEvent: 'You cannot book your own event.',
+	alreadyBooked: 'You cannot book the same event again.',
 };
 
 export { status, message };

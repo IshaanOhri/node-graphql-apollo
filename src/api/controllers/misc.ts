@@ -12,13 +12,17 @@ import { HttpResponse } from '../../handlers';
 import { catchAsync } from '../../middleware';
 
 // Home route
-const home = catchAsync(async (req: Request, res: Response, next: NextFunction) => {
-	next(new HttpResponse(status.ok, null, message.homeRoute));
-});
+const home = catchAsync(
+	async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+		next(new HttpResponse(status.ok, null, message.homeRoute));
+	}
+);
 
 // Health route
-const health = catchAsync(async (req: Request, res: Response, next: NextFunction) => {
-	next(new HttpResponse(status.ok, null, message.healthRoute));
-});
+const health = catchAsync(
+	async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+		next(new HttpResponse(status.ok, null, message.healthRoute));
+	}
+);
 
 export { home, health };

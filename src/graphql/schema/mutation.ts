@@ -17,6 +17,8 @@ const mutationSchema: DocumentNode = gql`
 
 		# Event Mutations
 		createEvent(eventInput: EventInput): Event!
+
+		# Booking Mutations
 	}
 `;
 

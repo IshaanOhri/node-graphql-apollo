@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 12:53:34
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-31 23:23:14
+ * @Last Modified time: 2021-02-01 22:27:41
  * @Description: Definition of the MongoDB User Model
  */
 
@@ -39,6 +39,12 @@ userSchema.virtual('events', {
 	ref: 'Event',
 	localField: '_id',
 	foreignField: 'creator',
+});
+
+userSchema.virtual('bookings', {
+	ref: 'Booking',
+	localField: '_id',
+	foreignField: 'user',
 });
 
 userSchema.set('toObject', { virtuals: true });

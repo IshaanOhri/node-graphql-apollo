@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 02:42:56
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-31 20:39:08
+ * @Last Modified time: 2021-02-01 22:29:34
  * @Description: Definition of Event for graphql schema
  */
 
@@ -17,6 +17,7 @@ const eventSchema: DocumentNode = gql`
 		price: Float!
 		date: String!
 		creator: User!
+		bookings: [Booking!]!
 	}
 
 	input EventInput {

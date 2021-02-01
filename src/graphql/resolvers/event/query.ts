@@ -2,14 +2,14 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-31 19:56:53
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-31 23:21:41
+ * @Last Modified time: 2021-02-01 20:34:49
  * @Description: Query resolvers for all Event related operations
  */
 
 import { message, status } from '../../../config';
 import { HttpError } from '../../../handlers';
 import { IEvent, IUser } from '../../../interfaces';
-import { Event } from '../../../models/Event';
+import { Event } from '../../../models';
 
 const eventQuery = {
 	myEvents: async (parent: any, args: any, context: any, info: any): Promise<Array<IEvent>> => {

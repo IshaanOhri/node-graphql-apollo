@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 02:41:59
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-02-01 08:20:56
+ * @Last Modified time: 2021-02-01 23:58:53
  * @Description: All queries for graphql schema
  */
 
@@ -18,6 +18,9 @@ const querySchema: DocumentNode = gql`
 		myEvents: [Event!]!
 		allEvents: [Event!]!
 		event(eventId: String!): Event!
+
+		# Booking Queries
+		bookEvent(eventId: String!): Booking!
 	}
 `;
 

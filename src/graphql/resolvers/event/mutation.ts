@@ -9,7 +9,7 @@
 import { message, status } from '../../../config';
 import { HttpError } from '../../../handlers';
 import { IEvent } from '../../../interfaces';
-import { Event } from '../../../models/Event';
+import { Event } from '../../../models';
 
 const eventMutation = {
 	createEvent: async (

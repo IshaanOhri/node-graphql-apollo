@@ -2,11 +2,13 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 01:16:32
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-02-01 08:23:03
+ * @Last Modified time: 2021-02-01 20:42:33
  * @Description: Indexing file for graphql resolvers
  */
 
 import { IResolvers } from 'apollo-server';
+import { bookingQuery } from './booking/query';
+import { bookingResolverChain } from './booking/resolver-chain';
 import { eventMutation } from './event/mutation';
 import { eventQuery } from './event/query';
 import { eventResolverChain } from './event/resolver-chain';
@@ -22,9 +24,11 @@ const resolvers: IResolvers = {
 	Query: {
 		...userQuery,
 		...eventQuery,
+		...bookingQuery,
 	},
 	...eventResolverChain,
 	...userResolverChain,
+	...bookingResolverChain,
 };
 
 export { resolvers };

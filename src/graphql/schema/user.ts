@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 02:42:14
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-31 01:48:27
+ * @Last Modified time: 2021-02-01 22:30:02
  * @Description: Definition of User for graphql schema
  */
 
@@ -16,6 +16,7 @@ const userSchema: DocumentNode = gql`
 		email: String!
 		password: String!
 		events: [Event!]!
+		bookings: [Booking!]!
 	}
 
 	type LoginResponse {
@@ -25,6 +26,7 @@ const userSchema: DocumentNode = gql`
 		password: String!
 		token: String
 		events: [Event!]!
+		bookings: [Booking!]!
 	}
 
 	input SignUpInput {
