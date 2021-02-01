@@ -17,7 +17,7 @@ const eventMutation = {
 		{ eventInput: { title, description, price, date } }: any,
 		context: any,
 		info: any
-	) => {
+	): Promise<IEvent> => {
 		if (!context.loggedIn) {
 			throw new HttpError(status.unauthorized, null, message.unauthorized);
 		}

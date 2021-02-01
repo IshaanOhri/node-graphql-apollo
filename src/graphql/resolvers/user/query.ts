@@ -12,12 +12,12 @@ import { IUser } from '../../../interfaces';
 import { User } from '../../../models';
 
 const userQuery = {
-	users: async (parent: any, args: any, context: any, info: any) => {
+	users: async (parent: any, args: any, context: any, info: any): Promise<Array<IUser>> => {
 		if (!context.loggedIn) {
 			throw new HttpError(status.unauthorized, null, message.unauthorized);
 		}
 
-		const user: IUser[] = await User.find();
+		const users: IUser[] = await User.find();
 
 		// await Promise.all(
 		// 	user.map(async (single) => {
@@ -29,7 +29,7 @@ const userQuery = {
 		// 	})
 		// );
 
-		return user;
+		return users;
 	},
 };
 

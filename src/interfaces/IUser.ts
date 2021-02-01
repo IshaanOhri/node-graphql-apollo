@@ -15,6 +15,7 @@ interface IUser extends Document {
 	email: string;
 	password: string;
 	events: [IEvent];
+	token: string;
 }
 
 interface IUserModel extends Model<IUser> {

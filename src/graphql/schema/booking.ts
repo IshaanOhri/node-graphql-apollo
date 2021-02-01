@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-01-30 02:43:04
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-01-31 23:20:20
+ * @Last Modified time: 2021-02-01 08:15:30
  * @Description: Definition of Booking for graphql schema
  */
 

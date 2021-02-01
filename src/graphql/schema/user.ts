@@ -23,7 +23,8 @@ const userSchema: DocumentNode = gql`
 		name: String!
 		email: String!
 		password: String!
-		token: String!
+		token: String
+		events: [Event!]!
 	}
 
 	input SignUpInput {

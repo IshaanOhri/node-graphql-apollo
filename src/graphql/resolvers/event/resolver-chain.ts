@@ -13,7 +13,7 @@ import { User } from '../../../models';
 
 const eventResolverChain: IResolvers = {
 	Event: {
-		creator: async (parent: IEvent) => {
+		creator: async (parent: IEvent): Promise<IUser | null> => {
 			const user: IUser | null = await User.findById(parent.creator);
 
 			return user;

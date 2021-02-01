@@ -12,7 +12,7 @@ import { IEvent, IUser } from '../../../interfaces';
 import { Event } from '../../../models/Event';
 
 const eventQuery = {
-	myEvents: async (parent: any, args: any, context: any, info: any) => {
+	myEvents: async (parent: any, args: any, context: any, info: any): Promise<Array<IEvent>> => {
 		if (!context.loggedIn) {
 			throw new HttpError(status.unauthorized, null, message.unauthorized);
 		}
@@ -27,7 +27,7 @@ const eventQuery = {
 
 		return user.events;
 	},
-	allEvents: async (parent: any, args: any, context: any, info: any) => {
+	allEvents: async (parent: any, args: any, context: any, info: any): Promise<Array<IEvent>> => {
 		if (!context.loggedIn) {
 			throw new HttpError(status.unauthorized, null, message.unauthorized);
 		}
@@ -36,7 +36,7 @@ const eventQuery = {
 
 		return events;
 	},
-	event: async (parent: any, { eventId }: any, context: any, info: any) => {
+	event: async (parent: any, { eventId }: any, context: any, info: any): Promise<IEvent> => {
 		if (!context.loggedIn) {
 			throw new HttpError(status.unauthorized, null, message.unauthorized);
 		}

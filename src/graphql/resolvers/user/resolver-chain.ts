@@ -7,21 +7,24 @@
  */
 
 import { IResolvers } from 'apollo-server';
-import { IUser } from '../../../interfaces';
+import { IEvent, IUser } from '../../../interfaces';
+
+const userEvents = {
+	events: async (parent: IUser): Promise<Array<IEvent>> => {
+		await parent
+			.populate({
+				path: 'events',
+			})
+			.execPopulate();
+
+		return parent.events;
+	},
+};
 
 // Provide information related to all events of a user
 const userResolverChain: IResolvers = {
-	User: {
-		events: async (parent: IUser) => {
-			await parent
-				.populate({
-					path: 'events',
-				})
-				.execPopulate();
-
-			return parent.events;
-		},
-	},
+	User: userEvents,
+	LoginResponse: userEvents,
 };
 
 export { userResolverChain };

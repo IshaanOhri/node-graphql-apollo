@@ -14,7 +14,12 @@ import { HttpError } from '../../../handlers';
 import { JWT_SECRET, message, status } from '../../../config';
 
 const userMutation = {
-	signUp: async (parent: any, { signUpInput: { name, email, password } }: any, context: any, info: any) => {
+	signUp: async (
+		parent: any,
+		{ signUpInput: { name, email, password } }: any,
+		context: any,
+		info: any
+	): Promise<IUser> => {
 		const check: boolean = await User.checkEmailExists(email);
 
 		if (check) {
@@ -33,7 +38,7 @@ const userMutation = {
 
 		return user;
 	},
-	login: async (parent: any, { loginInput: { email, password } }: any, context: any, info: any) => {
+	login: async (parent: any, { loginInput: { email, password } }: any, context: any, info: any): Promise<IUser> => {
 		const user: IUser | null = await User.findOne({ email });
 
 		if (!user) {
@@ -46,9 +51,11 @@ const userMutation = {
 			throw new HttpError(status.badRequest, null, message.incorrectPassword);
 		}
 
-		const token = jwt.sign({ _id: user._id }, JWT_SECRET, { expiresIn: '1h' });
+		const token: string = jwt.sign({ _id: user._id }, JWT_SECRET, { expiresIn: '1h' });
 
-		return { ...user._doc, token };
+		user.token = token;
+
+		return user;
 	},
 };
 
