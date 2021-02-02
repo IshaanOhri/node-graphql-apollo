@@ -2,7 +2,7 @@
  * @Author: Ishaan Ohri
  * @Date: 2021-02-01 20:07:57
  * @Last Modified by: Ishaan Ohri
- * @Last Modified time: 2021-02-01 23:56:46
+ * @Last Modified time: 2021-02-02 13:10:20
  * @Description: Query resolvers for all Booking related operations
  */
 
